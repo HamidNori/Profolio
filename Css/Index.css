@@ -1,3 +1,13 @@
+:root {
+  --primary-color: #3498db;
+  --secondary-color: #e63946;
+  --background-color: #253A27;
+  --text-color: #fff;
+  --font-family: "Arial, sans-serif";
+  --font-size: 16px;
+  --line-height: 1.5;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -7,18 +17,67 @@ body {
   background-image: url("/Images/Dator-Hero.jpg");
   background-size: cover;
   height: 100vh;
+  width: 100%;
+  overflow: hidden;
 }
-
-.hero-container {
+.hero .hero-container {
   height: 100%;
   width: 100%;
 }
-
-.left {
+.hero .hero-container .left {
   width: 50%;
   height: 100%;
   display: flex;
   justify-content: left;
-  align-items: center;
-}/*# sourceMappingURL=Index.css.map */
+  align-items: left;
+  flex-direction: column;
+}
+.hero .hero-container .left .slider {
+  width: 30em;
+  height: 100%;
+  overflow: hidden;
+}
+.hero .hero-container .left .slider :hover .item {
+  animation-play-state: paused !important;
+  filter: blur(5px);
+}
+.hero .hero-container .left .slider .item:hover {
+  filter: blur(0px);
+  transform: scale(1.1);
+}
+.hero .hero-container .left .slider .slider-text {
+  list-style: none;
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+.hero .hero-container .left .slider .slider-text li {
+  position: absolute;
+  top: 100%;
+  animation: move 10s infinite linear;
+  transition: filter 0.4s ease-in-out, transform 0.4s ease-in-out;
+  animation-delay: calc(10s / (var(--quantity)) * (var(--position) - 8));
+}
+.hero .hero-container .left .slider .slider-text li a {
+  font-family: Liu Jian Mao Cao;
+  font-weight: thin;
+  font-size: 8em;
+  height: 100%;
+  text-decoration: none;
+  color: var(--text-color);
+  font-weight: bold;
+}
+@keyframes move {
+  from {
+    top: 100%;
+  }
+  to {
+    top: -150px;
+  }
+}
 
+.About-1 {
+  background-color: #253A27;
+  padding: 2em 0;
+  height: 100vh;
+}/*# sourceMappingURL=Index.css.map */
