@@ -1,26 +1,18 @@
-console.clear(); // Start with a clean console on refesh
+console.clear(); 
+gsap.registerPlugin(ScrollTrigger);
 let cards = document.querySelectorAll(".card");
 const stagger = 1;
-const scaleMax = gsap.utils.mapRange(1, cards.length - 1, 0.8, 1);
+const scaleMax = gsap.utils.mapRange(0.5, cards.length - 1, 0.9, 1);
 
-
-//--------------------------------//
-// Setup the cards loaction  
-//--------------------------------//
 gsap.set(".card", {
   transformStyle: "preserve-3d",
-  transformPerspective: 1920,
-  transformOrigin: "center top",
+  transformPerspective: window.innerWidth * 2,
+  transformOrigin: "top center",
   y: (index) => {
     return 30 * index;
   }
 });
-// END Setup the cards loaction  --------------//
 
-
-//--------------------------------//
-// The aniatmion 
-//--------------------------------//
 const tl = gsap.timeline({});
 
 tl.from(".card", {
@@ -34,8 +26,8 @@ tl.from(".card", {
 tl.to(
   ".card",
   {
-    rotationX: -20,
-    opacity: 0.9,
+    rotationX: -5,
+    opacity: 1,
     scale: (index) => {
       return scaleMax(index);
     },
@@ -45,4 +37,30 @@ tl.to(
   },
   stagger
 );
-// END The aniatmion --------------//
+
+
+gsap.to(".scroll-container", {
+  scrollTrigger: {
+    trigger: ".scroll-container",
+    start: "top top",
+    end: "+=200", 
+    scrub: true, 
+    markers: false 
+  },
+  opacity: 0,
+  y: -50,
+  ease: "none"
+});
+
+const openBnt = document.getElementById("Open-navbar");
+const closeBnt = document.getElementById("Close-navbar");
+const navbar = document.getElementById("navbar");
+
+openBnt.addEventListener("click", () => {
+  navbar.classList.add("open");
+});
+
+closeBnt.addEventListener("click", () =>{
+  navbar.classList.remove("open");
+})
+
