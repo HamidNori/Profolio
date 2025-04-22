@@ -64,5 +64,24 @@ openBnt.addEventListener("click", () => {
 
 closeBnt.addEventListener("click", () =>{
   navbar.classList.remove("open");
-})
+});
 
+const pop = gsap.timeline({
+  paused: true,
+});
+
+pop.to(".popup-template", {
+  duration: 0.8,
+  opacity: 1,
+  y: 0,
+  scale: 1,
+  ease: "Power4.easeOut",
+});
+
+function open_pop(){
+  pop.play();
+};
+
+function close_pop(){
+  pop.reverse();
+};

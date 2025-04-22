@@ -131,6 +131,7 @@ body .sida-wrapper .content .sticky-container .cards-layout {
   grid-area: 1/1/2/2;
 }
 body .sida-wrapper .content .sticky-container .cards-layout .card {
+  display: block;
   cursor: pointer;
   border-radius: 10px;
   height: 60svh;
@@ -146,34 +147,6 @@ body .sida-wrapper .content .sticky-container .cards-layout .card {
   box-shadow: 0px -10px 30px rgba(0, 0, 0, 0.2);
   cursor: pointer;
   z-index: 100;
-}
-body .sida-wrapper .content .sticky-container .cards-layout .cardopen {
-  z-index: 1000;
-}
-body .sida-wrapper .content .sticky-container .cards-layout .card1 {
-  background-color: var(--primary-color);
-  color: var(--text-color);
-  cursor: pointer;
-}
-body .sida-wrapper .content .sticky-container .cards-layout .card2 {
-  background-color: var(--secondary-color);
-  color: var(--text-color);
-}
-body .sida-wrapper .content .sticky-container .cards-layout .card3 {
-  background-color: var(--primary-color);
-  color: var(--text-color);
-}
-body .sida-wrapper .content .sticky-container .cards-layout .card4 {
-  background-color: var(--secondary-color);
-  color: var(--text-color);
-}
-body .sida-wrapper .content .sticky-container .cards-layout .card5 {
-  background-color: var(--primary-color);
-  color: var(--text-color);
-}
-body .sida-wrapper .content .sticky-container .cards-layout .card6 {
-  background-color: var(--secondary-color);
-  color: var(--text-color);
 }
 body .sida-wrapper .footer {
   display: flex;

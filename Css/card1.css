@@ -1,0 +1,35 @@
+#first-card {
+  background-color: #d80000;
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+#first-card .popup-btn {
+  background-color: #fff;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  background-color: #d80000;
+  cursor: pointer;
+}
+#first-card .popup-btn .popup-template {
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  z-index: 1000;
+  width: 100%;
+  transform: translateY(1000px);
+  opacity: 0;
+}
+#first-card .popup-btn .popup-template .popup-close {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  padding: 10px;
+  cursor: pointer;
+}/*# sourceMappingURL=card1.css.map */

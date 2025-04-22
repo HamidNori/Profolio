@@ -5,9 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Protfolio</title>
     <link rel="stylesheet" href="/Css/Index.css">
+    <link rel="stylesheet" href="/Css/card1.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 </head>
@@ -33,17 +37,22 @@
                 
             </div>
             <div class="cards-layout">
-              <div class="card card1" href="#ett" id="ett">
-                <div class="inner-card">
-                    <button id="Close-card" class="Close-card">X</button>
-                    
+              <div class="card" id="first-card">
+                <div class="popup-btn" onclick="open_pop()">
+                    Hej
+                </div>
+                <div class="popup-template">
+                    <div class="popup-close" onclick="close_pop()">
+                        <span>X</span>
+                    </div>
+                    <div class="popup-top">Hej hur mår du</div>
                 </div>
               </div>
-              <div class="card card2">2</div>
-              <div class="card card3">3</div>
-              <div class="card card4">4</div>
-              <div class="card card5">5</div>
-              <div class="card card6" id="last-card">6</div>
+              <div class="card" id="second-card">2</div>
+              <div class="card" id="third-card">3</div>
+              <div class="card" id="forth-card">4</div>
+              <div class="card" id="feth-card">5</div>
+              <div class="card" id="sixth-card">6</div>
             </div>
           </div>
     </div>
