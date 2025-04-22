@@ -2,7 +2,7 @@ console.clear();
 gsap.registerPlugin(ScrollTrigger);
 let cards = document.querySelectorAll(".card");
 const stagger = 1;
-const scaleMax = gsap.utils.mapRange(0.5, cards.length - 1, 0.9, 1);
+const scaleMax = gsap.utils.mapRange(0.001, cards.length - 1, 0.9, 0.999);
 
 gsap.set(".card", {
   transformStyle: "preserve-3d",
@@ -39,11 +39,13 @@ tl.to(
 );
 
 
+
+
 gsap.to(".scroll-container", {
   scrollTrigger: {
     trigger: ".scroll-container",
     start: "top top",
-    end: "+=200", 
+    end: "+=400", 
     scrub: true, 
     markers: false 
   },
