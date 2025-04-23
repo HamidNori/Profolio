@@ -2,7 +2,7 @@ console.clear();
 gsap.registerPlugin(ScrollTrigger);
 let cards = document.querySelectorAll(".card");
 const stagger = 1;
-const scaleMax = gsap.utils.mapRange(0.001, cards.length - 1, 0.9, 0.999);
+const scaleMax = gsap.utils.mapRange(0.001, cards.length - 1, 0.9, 1);
 
 gsap.set(".card", {
   transformStyle: "preserve-3d",

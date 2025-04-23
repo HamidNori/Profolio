@@ -121,6 +121,9 @@ body
 
     .content 
       background-color: var(--background-color)
+      display: flex
+      align-items: center
+      justify-content: space-around
       scroll-behavior: smooth
       cursor: pointer
 
@@ -133,7 +136,7 @@ body
         
 
         .cards-layout 
-          height: 550svh
+          height: 500vh
           position: relative
           display: grid 
           grid-template-columns: 1fr 
@@ -147,13 +150,19 @@ body
 
 
           .card 
+            display: block
+            overflow: hidden
             cursor: pointer
             border-radius: 10px
             height:60svh
             width: 80%
+            background-color: white
             position: sticky
             top: 10%
             margin: 3.5rem
+            display: flex
+            align-items: center
+            justify-content: center
             font-size: 4em
             box-shadow: 0px -10px 30px rgba(0, 0, 0, 0.2)
             cursor: pointer
