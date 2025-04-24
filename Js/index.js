@@ -63,4 +63,3 @@ openBnt.addEventListener("click", () => {
 closeBnt.addEventListener("click", () =>{
   navbar.classList.remove("open");
 });
-

@@ -1,4 +1,4 @@
 #second-card {
-  background-color: #d80000;
-  transition: transform 0.2s;
+  background: #2A7B9B;
+  background: linear-gradient(90deg, rgb(42, 123, 155) 0%, rgb(87, 199, 133) 32%, rgb(237, 221, 83) 100%);
 }/*# sourceMappingURL=card2.css.map */
