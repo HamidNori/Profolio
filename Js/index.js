@@ -63,3 +63,22 @@ openBnt.addEventListener("click", () => {
 closeBnt.addEventListener("click", () =>{
   navbar.classList.remove("open");
 });
+
+// Öppna kort som popup
+cards.forEach((card) => {
+  card.addEventListener("click", function (e) {
+    // Förhindra att klick på stängknappen triggar öppning igen
+    if (e.target.classList.contains("close-btn")) return;
+
+    cards.forEach(c => c.classList.remove("open")); // Stäng andra kort
+    card.classList.add("open");
+  });
+});
+
+// Stäng popup när man klickar på stängknappen
+document.querySelectorAll(".close-btn").forEach((btn) => {
+  btn.addEventListener("click", function (e) {
+    e.stopPropagation(); // Förhindra bubbling
+    this.closest(".card").classList.remove("open");
+  });
+});
