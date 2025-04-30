@@ -53,6 +53,7 @@ body .navbar.open .navbar-inner {
   height: 100%;
   width: 100%;
   transition: all 0.3s ease-in;
+  z-index: inherit;
 }
 body .navbar.open .navbar-inner .Open-navbar {
   font-size: 2rem;
@@ -150,6 +151,7 @@ body .sida-wrapper .content .sticky-container .cards-layout .card {
   font-size: 4em;
   box-shadow: 0px -10px 30px rgba(0, 0, 0, 0.2);
   cursor: pointer;
+  z-index: 1000;
 }
 body .sida-wrapper .footer {
   display: flex;

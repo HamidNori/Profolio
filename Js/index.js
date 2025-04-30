@@ -3,6 +3,7 @@ gsap.registerPlugin(ScrollTrigger);
 let cards = document.querySelectorAll(".card");
 const stagger = 1;
 const scaleMax = gsap.utils.mapRange(0.001, cards.length - 1, 0.9, 1);
+const secoundCard = document.getElementById("second-card");
 
 gsap.set(".card", {
   transformStyle: "preserve-3d",
@@ -64,21 +65,56 @@ closeBnt.addEventListener("click", () =>{
   navbar.classList.remove("open");
 });
 
-// Öppna kort som popup
-cards.forEach((card) => {
-  card.addEventListener("click", function (e) {
-    // Förhindra att klick på stängknappen triggar öppning igen
-    if (e.target.classList.contains("close-btn")) return;
+let isExpanded = false;
 
-    cards.forEach(c => c.classList.remove("open")); // Stäng andra kort
-    card.classList.add("open");
-  });
+secoundCard.addEventListener("click", () => {
+  // Växla tillståndet för isExpanded
+  isExpanded = !isExpanded;
+
+  if (isExpanded) {
+    // Expandera kortet
+    gsap.to(secoundCard, {
+      clearProps: "transform", // Ta bort transform-egenskapen
+      width: "100vw",
+      height: "100vh",
+      padding: 0,
+      margin: 0,
+      top: 0,
+      left: 0,
+      position: "fixed",
+      zIndex: 1001,
+      duration: 0.5,
+      ease: "power2.out",
+      borderRadius: 0,
+      onStart: () => {
+        document.body.style.overflow = "hidden"; // Förhindra scroll
+      }
+    });
+  } else {
+    // Återställ kortet
+    gsap.to(secoundCard, {
+      width: "80%",
+      height: "60svh",
+      margin: "3.5rem",
+      position: "sticky",
+      top: "10%",
+      zIndex: 1000,
+      duration: 0.5,
+      ease: "power2.inOut",
+      onComplete: () => {
+        document.body.style.overflow = ""; // Återställ scroll
+      }
+    });
+
+    // Återställ transform-egenskapen
+    gsap.set(secoundCard, {
+      transformStyle: "preserve-3d",
+      transformPerspective: window.innerWidth * 2,
+      transformOrigin: "top center",
+      y: 30 // Återställ y-position
+    });
+  }
 });
 
-// Stäng popup när man klickar på stängknappen
-document.querySelectorAll(".close-btn").forEach((btn) => {
-  btn.addEventListener("click", function (e) {
-    e.stopPropagation(); // Förhindra bubbling
-    this.closest(".card").classList.remove("open");
-  });
-});
+
+
