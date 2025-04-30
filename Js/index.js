@@ -74,7 +74,7 @@ secoundCard.addEventListener("click", () => {
   if (isExpanded) {
     // Expandera kortet
     gsap.to(secoundCard, {
-      clearProps: "transform", // Ta bort transform-egenskapen
+      clearProps: "transform", 
       width: "100vw",
       height: "100vh",
       padding: 0,
