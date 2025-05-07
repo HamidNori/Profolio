@@ -3,7 +3,6 @@ gsap.registerPlugin(ScrollTrigger);
 let cards = document.querySelectorAll(".card");
 const stagger = 1;
 const scaleMax = gsap.utils.mapRange(0.001, cards.length - 1, 0.9, 1);
-const secoundCard = document.getElementById("second-card");
 
 gsap.set(".card", {
   transformStyle: "preserve-3d",
@@ -64,57 +63,3 @@ openBnt.addEventListener("click", () => {
 closeBnt.addEventListener("click", () =>{
   navbar.classList.remove("open");
 });
-
-let isExpanded = false;
-
-secoundCard.addEventListener("click", () => {
-  // Växla tillståndet för isExpanded
-  isExpanded = !isExpanded;
-
-  if (isExpanded) {
-    // Expandera kortet
-    gsap.to(secoundCard, {
-      clearProps: "transform", 
-      width: "100vw",
-      height: "100vh",
-      padding: 0,
-      margin: 0,
-      top: 0,
-      left: 0,
-      position: "fixed",
-      zIndex: 1001,
-      duration: 0.5,
-      ease: "power2.out",
-      borderRadius: 0,
-      onStart: () => {
-        document.body.style.overflow = "hidden"; // Förhindra scroll
-      }
-    });
-  } else {
-    // Återställ kortet
-    gsap.to(secoundCard, {
-      width: "80%",
-      height: "60svh",
-      margin: "3.5rem",
-      position: "sticky",
-      top: "10%",
-      zIndex: 1000,
-      duration: 0.5,
-      ease: "power2.inOut",
-      onComplete: () => {
-        document.body.style.overflow = ""; // Återställ scroll
-      }
-    });
-
-    // Återställ transform-egenskapen
-    gsap.set(secoundCard, {
-      transformStyle: "preserve-3d",
-      transformPerspective: window.innerWidth * 2,
-      transformOrigin: "top center",
-      y: 30 // Återställ y-position
-    });
-  }
-});
-
-
-
