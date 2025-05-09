@@ -81,15 +81,13 @@ body .navbar.open .navbar-inner a {
 body .sida-wrapper {
   display: grid;
   height: 100vh;
-  grid-template-rows: auto 1fr auto;
-  grid-template-areas: "header" "content" "footer";
 }
 body .sida-wrapper .header {
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: fixed;
+  position: sticky;
   z-index: 21;
 }
 body .sida-wrapper .header a {
@@ -110,26 +108,68 @@ body .sida-wrapper .header .Open-navbar {
   margin: 20px;
   padding: 10px;
 }
-body .sida-wrapper .content {
+body .content {
   background-color: var(--background-color);
   display: flex;
   align-items: center;
   justify-content: space-around;
   scroll-behavior: smooth;
   cursor: pointer;
+  height: 100%;
+  margin-bottom: 10rem;
 }
-body .sida-wrapper .footer {
+body .content a {
+  color: unset;
+  text-decoration: none;
+}
+body .content .container {
+  width: 100%;
+  margin: auto;
+  text-align: center;
+  padding-top: 10px;
+}
+body .content .title {
+  font-size: xx-large;
+  padding: 20px 0;
+  font-weight: 500;
+}
+body .content .listProduct {
+  gap: 20px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+body .content .listProduct .item {
+  margin: 20px;
+  width: 20rem;
+  height: auto;
+  background-color: #EEEEE6;
+  padding: 20px;
+  border-radius: 20px;
+}
+body .content .listProduct .item img {
+  width: 90%;
+  mix-blend-mode: darken;
+}
+body .content .listProduct .item h2 {
+  font-weight: 500;
+  font-size: large;
+}
+body .content .listProduct .item .price {
+  letter-spacing: 7px;
+  font-size: small;
+}
+body .footer {
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
   position: fixed;
-  height: 100%;
   width: 100%;
-  overflow: hidden;
-  z-index: 20;
+  height: 100%;
 }
-body .sida-wrapper .footer a {
-  z-index: 1;
+body .footer a {
   text-decoration: none;
   margin: 20px;
   padding: 10px;

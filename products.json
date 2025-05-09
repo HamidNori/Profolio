@@ -1,0 +1,86 @@
+[
+{
+    "id": 1,
+    "name": "Red",
+    "price": "299kr",
+    "image": "/Images/Red.jpg",
+    "descrription":  "Defining modern luxury and timeless style since 1967. A family affair, Ralph Lauren offers collections for men, women, and children along with fragrance and home furnishings. The epitome of classic American style, Ralph Lauren is known around the globe for quality craftsmanship and enduring elegance."
+},
+{
+    "id": 2,
+    "name": "Blue",
+    "price": "299kr",
+    "image": "/Images/Blue.jpg",
+    "descrription":  "Defining modern luxury and timeless style since 1967. A family affair, Ralph Lauren offers collections for men, women, and children along with fragrance and home furnishings. The epitome of classic American style, Ralph Lauren is known around the globe for quality craftsmanship and enduring elegance."
+},
+{
+    "id": 3,
+    "name": "Greay",
+    "price": "299kr",
+    "image": "/Images/Greay.jpg",
+    "descrription":  "Defining modern luxury and timeless style since 1967. A family affair, Ralph Lauren offers collections for men, women, and children along with fragrance and home furnishings. The epitome of classic American style, Ralph Lauren is known around the globe for quality craftsmanship and enduring elegance."
+},
+{
+    "id": 4,
+    "name": "Pink",
+    "price": "299kr",
+    "image": "/Images/Pink.jpg",
+    "descrription":  "Defining modern luxury and timeless style since 1967. A family affair, Ralph Lauren offers collections for men, women, and children along with fragrance and home furnishings. The epitome of classic American style, Ralph Lauren is known around the globe for quality craftsmanship and enduring elegance."
+},
+{
+    "id": 5,
+    "name": "baby_blue",
+    "price": "299kr",
+    "image": "/Images/baby_blue.jpg",
+    "descrription":  "Defining modern luxury and timeless style since 1967. A family affair, Ralph Lauren offers collections for men, women, and children along with fragrance and home furnishings. The epitome of classic American style, Ralph Lauren is known around the globe for quality craftsmanship and enduring elegance."
+},
+{
+    "id": 6,
+    "name": "Yellow",
+    "price": "299kr",
+    "image": "/Images/yellow.jpg",
+    "descrription":  "Defining modern luxury and timeless style since 1967. A family affair, Ralph Lauren offers collections for men, women, and children along with fragrance and home furnishings. The epitome of classic American style, Ralph Lauren is known around the globe for quality craftsmanship and enduring elegance."
+},
+{
+    "id": 7,
+    "name": "Red",
+    "price": "299kr",
+    "image": "/Images/Red.jpg",
+    "descrription":  "Defining modern luxury and timeless style since 1967. A family affair, Ralph Lauren offers collections for men, women, and children along with fragrance and home furnishings. The epitome of classic American style, Ralph Lauren is known around the globe for quality craftsmanship and enduring elegance."
+},
+{
+    "id": 8,
+    "name": "Blue",
+    "price": "299kr",
+    "image": "/Images/Blue.jpg",
+    "descrription":  "Defining modern luxury and timeless style since 1967. A family affair, Ralph Lauren offers collections for men, women, and children along with fragrance and home furnishings. The epitome of classic American style, Ralph Lauren is known around the globe for quality craftsmanship and enduring elegance."
+},
+{
+    "id": 9,
+    "name": "Greay",
+    "price": "299kr",
+    "image": "/Images/Greay.jpg",
+    "descrription":  "Defining modern luxury and timeless style since 1967. A family affair, Ralph Lauren offers collections for men, women, and children along with fragrance and home furnishings. The epitome of classic American style, Ralph Lauren is known around the globe for quality craftsmanship and enduring elegance."
+},
+{
+    "id": 10,
+    "name": "Pink",
+    "price": "299kr",
+    "image": "/Images/Pink.jpg",
+    "descrription":  "Defining modern luxury and timeless style since 1967. A family affair, Ralph Lauren offers collections for men, women, and children along with fragrance and home furnishings. The epitome of classic American style, Ralph Lauren is known around the globe for quality craftsmanship and enduring elegance."
+},
+{
+    "id": 11,
+    "name": "baby_blue",
+    "price": "299kr",
+    "image": "/Images/baby_blue.jpg",
+    "descrription":  "Defining modern luxury and timeless style since 1967. A family affair, Ralph Lauren offers collections for men, women, and children along with fragrance and home furnishings. The epitome of classic American style, Ralph Lauren is known around the globe for quality craftsmanship and enduring elegance."
+},
+{
+    "id": 12,
+    "name": "Yellow",
+    "price": "299kr",
+    "image": "/Images/yellow.jpg",
+    "descrription":  "Defining modern luxury and timeless style since 1967. A family affair, Ralph Lauren offers collections for men, women, and children along with fragrance and home furnishings. The epitome of classic American style, Ralph Lauren is known around the globe for quality craftsmanship and enduring elegance."
+}
+]
