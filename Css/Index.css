@@ -1,5 +1,5 @@
 :root {
-  --primary-color: #3498db;
+  --primary-color: #e6e6e6;
   --secondary-color: #e63946;
   --background-color: #fff;
   --text-color: #000;
@@ -13,7 +13,7 @@
 }
 
 html {
-  scroll-behavior: smooth;
+  scroll-behavior: smooth !important;
 }
 
 body {
@@ -155,6 +155,66 @@ body .sida-wrapper .content .sticky-container .cards-layout .card {
   cursor: pointer;
   z-index: 10;
 }
+body .sida-wrapper .content .sticky-container .cards-layout #first-card {
+  background: var(--primary-color);
+}
+body .sida-wrapper .content .sticky-container .cards-layout #first-card img {
+  mix-blend-mode: darken;
+  height: 70%;
+  width: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+body .sida-wrapper .content .sticky-container .cards-layout #second-card {
+  background: var(--primary-color);
+}
+body .sida-wrapper .content .sticky-container .cards-layout #second-card img {
+  mix-blend-mode: darken;
+  height: 70%;
+  width: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+body .sida-wrapper .content .sticky-container .cards-layout #third-card {
+  background: var(--primary-color);
+}
+body .sida-wrapper .content .sticky-container .cards-layout #third-card img {
+  mix-blend-mode: darken;
+  height: 70%;
+  width: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+body .sida-wrapper .content .sticky-container .cards-layout #forth-card {
+  background: var(--primary-color);
+}
+body .sida-wrapper .content .sticky-container .cards-layout #forth-card img {
+  mix-blend-mode: darken;
+  height: 70%;
+  width: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+body .sida-wrapper .content .sticky-container .cards-layout #feth-card {
+  background: var(--primary-color);
+}
+body .sida-wrapper .content .sticky-container .cards-layout #feth-card img {
+  mix-blend-mode: darken;
+  height: 70%;
+  width: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+body .sida-wrapper .content .sticky-container .cards-layout #sixth-card {
+  background: var(--primary-color);
+}
+body .sida-wrapper .content .sticky-container .cards-layout #sixth-card img {
+  mix-blend-mode: darken;
+  height: 70%;
+  width: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
 body .sida-wrapper .footer {
   display: flex;
   align-items: flex-end;
@@ -180,12 +240,12 @@ body .sida-wrapper .footer a {
   display: flex;
   align-items: end;
   justify-content: center;
-  transform: translateY(-5%);
-  height: 100%;
+  overflow: hidden;
+  margin-top: 18rem;
   width: 100%;
+  z-index: 998;
 }
 .scroll-container a {
-  z-index: 1;
   text-decoration: none;
 }
 .scroll-container a .main__scroll-text {
