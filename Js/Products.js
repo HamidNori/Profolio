@@ -1,27 +1,30 @@
 let products = null;
-
-fetch ('/products.json')
-.then(response => response.json())
-.then(data => {
-    products = data
-    console.log(products);
-    addDataToHTML();
+// get datas from file json
+fetch('/products.json')
+  .then(response => response.json())
+  .then(data => {
+      products = data;
+      addDataToHTML();
 })
 
-let listProduct = document.querySelector('.listProduct');
-function addDataToHTML() {
-  listProduct.innerHTML = ''; // Clear any previous products
+function addDataToHTML(){
+// remove datas default from HTML
+let listProductHTML = document.querySelector('.listProduct');
 
+// add new datas
+if(products != null) // if has data
+{
   products.forEach(product => {
-    let newProduct = document.createElement('a');
-    newProduct.href = '/detail.html?id=' + product.id;
-    newProduct.classList.add('item');
-    newProduct.innerHTML = `
-      <img src="${product.image}" alt="${product.name}">
+      let newProduct = document.createElement('a');
+      newProduct.href = '/Html/detail.html?id=' + product.id;
+      newProduct.classList.add('item');
+      newProduct.innerHTML = 
+      `<img src="${product.image}" alt="">
       <h2>${product.name}</h2>
-      <p>$${product.price}</p>
-    `;
+      <div class="price">$${product.price}</div>      `;
+      
+      listProductHTML.appendChild(newProduct);
 
-    listProduct.appendChild(newProduct);
   });
+}
 }
