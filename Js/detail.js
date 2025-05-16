@@ -26,7 +26,7 @@ let products = null;
 
     (products.filter(value => value.id != productId)).forEach(product => {
         let newProduct = document.createElement('a');
-        newProduct.href = '/detail.html?id=' + product.id;
+        newProduct.href = '/html/detail.html?id=' + product.id;
         newProduct.classList.add('item');
         newProduct.innerHTML = 
         `<img src="${product.image}" alt="">

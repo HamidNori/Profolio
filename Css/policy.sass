@@ -124,16 +124,136 @@ body
 
     .content 
       background-color: var(--background-color)
+      min-height: 100vh
       display: flex
-      align-items: center
-      justify-content: space-around
-      scroll-behavior: smooth
-      cursor: pointer
-
-          
+      align-items: flex-start
+      justify-content: center
+      padding-top: 80px 
+      
+      .policy-section
+        width: 100%
+        max-width: 1200px
+        padding: 2rem
+        margin: 0 auto
         
+        .hero-section
+          text-align: center
+          margin-bottom: 4rem
+          
+          h1
+            font-size: clamp(2.5rem, 5vw, 3.5rem)
+            font-weight: 800
+            background: linear-gradient(45deg, var(--secondary-color), #333)
+            -webkit-background-clip: text
+            color: transparent
+            margin-bottom: 1rem
+          
+          .tagline
+            font-size: clamp(1rem, 2vw, 1.2rem)
+            color: #666
+        
+        .policy-grid
+          display: grid
+          grid-template-columns: repeat(auto-fit, minmax(300px, 1fr))
+          gap: 2rem
+          margin-bottom: 4rem
+          
+          .policy-card
+            background: var(--background-color)
+            border-radius: 16px
+            padding: 2rem
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08)
+            transition: transform 0.3s ease, box-shadow 0.3s ease
             
-
+            &:hover
+              transform: translateY(-5px)
+              box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12)
+            
+            .card-header
+              display: flex
+              align-items: center
+              gap: 1rem
+              margin-bottom: 1.5rem
+              
+              ion-icon
+                font-size: 2rem
+                color: var(--secondary-color)
+              
+              h2
+                font-size: 1.5rem
+                font-weight: 600
+                color: var(--text-color)
+                margin: 0
+            
+            .card-content
+              p
+                color: #666
+                line-height: 1.6
+                margin-bottom: 1.5rem
+              
+              ul
+                list-style: none
+                padding: 0
+                margin-bottom: 2rem
+                
+                li
+                  padding: 0.5rem 0
+                  padding-left: 1.5rem
+                  position: relative
+                  color: #444
+                  
+                  &:before
+                    content: "•"
+                    color: var(--secondary-color)
+                    position: absolute
+                    left: 0
+              
+              .learn-more
+                width: 100%
+                padding: 0.8rem
+                border: 2px solid var(--secondary-color)
+                border-radius: 8px
+                background: transparent
+                color: var(--secondary-color)
+                font-weight: 500
+                cursor: pointer
+                transition: all 0.3s ease
+                
+                &:hover
+                  background: var(--secondary-color)
+                  color: white
+        
+        .contact-section
+          text-align: center
+          background: linear-gradient(135deg, #fff, var(--primary-color))
+          padding: 3rem
+          border-radius: 16px
+          margin-top: 2rem
+          
+          h2
+            font-size: 2rem
+            margin-bottom: 1rem
+          
+          p
+            color: #666
+            margin-bottom: 2rem
+            max-width: 600px
+            margin-left: auto
+            margin-right: auto
+          
+          .contact-btn
+            padding: 1rem 2.5rem
+            background: var(--secondary-color)
+            color: white
+            border: none
+            border-radius: 8px
+            font-weight: 500
+            cursor: pointer
+            transition: all 0.3s ease
+            
+            &:hover
+              transform: scale(1.05)
+              box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1)
 
     .footer 
       display: flex
@@ -157,5 +277,34 @@ body
         color: var(--text-color)
         font-size: 1rem
         font-weight: 500
-      
+
+@media (max-width: 768px)
+    .policy-section
+        padding: 4rem 1rem
         
+        .hero-section
+            h1
+                font-size: 2.5rem
+        
+        .policy-grid
+            grid-template-columns: 1fr
+
+  .content
+    padding-top: 60px
+    
+    .policy-section
+      padding: 1rem
+      
+      .hero-section
+        margin-bottom: 2rem
+      
+      .policy-grid
+        gap: 1.5rem
+        
+        .policy-card
+          padding: 1.5rem
+      
+      .contact-section
+        padding: 2rem 1.5rem
+
+
