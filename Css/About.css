@@ -134,7 +134,7 @@ body .sida-wrapper .content .about-section h1 {
   font-size: 2.5rem;
   font-weight: 700;
   margin-bottom: 1rem;
-  color: var(--secondary-color);
+  color: var(--text-color);
 }
 body .sida-wrapper .content .about-section p {
   font-size: 1.1rem;
@@ -198,7 +198,7 @@ body .sida-wrapper .content .about-section .about-details .mission-box .stats {
 body .sida-wrapper .content .about-section .about-details .mission-box .stats .stat-item .number {
   font-size: 2.5rem;
   font-weight: 700;
-  color: var(--secondary-color);
+  color: var(--text-color);
   display: block;
 }
 body .sida-wrapper .content .about-section .about-details .mission-box .stats .stat-item .label {
@@ -273,7 +273,6 @@ body .sida-wrapper .footer {
   height: 100%;
   width: 100%;
   overflow: hidden;
-  z-index: 20;
 }
 body .sida-wrapper .footer a {
   z-index: 1;

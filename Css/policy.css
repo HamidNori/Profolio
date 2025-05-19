@@ -111,132 +111,139 @@ body .sida-wrapper .header .Open-navbar {
   margin: 20px;
   padding: 10px;
 }
-body .sida-wrapper .content {
+body .content {
   background-color: var(--background-color);
+  margin: 3rem;
+  min-height: 100vh;
   display: flex;
-  align-items: center;
-  justify-content: space-around;
-  scroll-behavior: smooth;
-  cursor: pointer;
-  margin: 50rem;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 80px;
 }
-body .sida-wrapper .content .policy-section {
+body .content .policy-section {
+  width: 100%;
   max-width: 1200px;
-  padding: 6rem 2rem;
-  margin: 2rem;
+  padding: 2rem;
+  margin: 0 auto;
 }
-body .sida-wrapper .content .policy-section .hero-section {
+body .content .policy-section .hero-section {
   text-align: center;
   margin-bottom: 4rem;
-  margin-top: 50rem;
 }
-body .sida-wrapper .content .policy-section .hero-section h1 {
-  font-size: 3.5rem;
+body .content .policy-section .hero-section h1 {
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
   font-weight: 800;
-  background: linear-gradient(45deg, var(--secondary-color), #333);
   -webkit-background-clip: text;
-  color: transparent;
+  color: black;
   margin-bottom: 1rem;
 }
-body .sida-wrapper .content .policy-section .hero-section .tagline {
-  font-size: 1.2rem;
+body .content .policy-section .hero-section .tagline {
+  font-size: clamp(1rem, 2vw, 1.2rem);
   color: #666;
 }
-body .sida-wrapper .content .policy-section .policy-grid {
+body .content .policy-section .policy-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
   margin-bottom: 4rem;
 }
-body .sida-wrapper .content .policy-section .policy-grid .policy-card {
-  background: #fff;
-  border-radius: 20px;
+body .content .policy-section .policy-grid .policy-card {
+  background: var(--background-color);
+  border-radius: 16px;
   padding: 2rem;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-body .sida-wrapper .content .policy-section .policy-grid .policy-card:hover {
+body .content .policy-section .policy-grid .policy-card:hover {
   transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
 }
-body .sida-wrapper .content .policy-section .policy-grid .policy-card .card-header {
+body .content .policy-section .policy-grid .policy-card .card-header {
   display: flex;
   align-items: center;
   gap: 1rem;
   margin-bottom: 1.5rem;
 }
-body .sida-wrapper .content .policy-section .policy-grid .policy-card .card-header ion-icon {
+body .content .policy-section .policy-grid .policy-card .card-header ion-icon {
   font-size: 2rem;
-  color: var(--secondary-color);
-}
-body .sida-wrapper .content .policy-section .policy-grid .policy-card .card-header h2 {
-  margin: 0;
-  font-size: 1.5rem;
   color: var(--text-color);
 }
-body .sida-wrapper .content .policy-section .policy-grid .policy-card .card-content p {
+body .content .policy-section .policy-grid .policy-card .card-header h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text-color);
+  margin: 0;
+}
+body .content .policy-section .policy-grid .policy-card .card-content p {
   color: #666;
+  line-height: 1.6;
   margin-bottom: 1.5rem;
 }
-body .sida-wrapper .content .policy-section .policy-grid .policy-card .card-content ul {
+body .content .policy-section .policy-grid .policy-card .card-content ul {
   list-style: none;
   padding: 0;
   margin-bottom: 2rem;
 }
-body .sida-wrapper .content .policy-section .policy-grid .policy-card .card-content ul li {
+body .content .policy-section .policy-grid .policy-card .card-content ul li {
   padding: 0.5rem 0;
-  color: #444;
-  position: relative;
   padding-left: 1.5rem;
+  position: relative;
+  color: #444;
 }
-body .sida-wrapper .content .policy-section .policy-grid .policy-card .card-content ul li:before {
+body .content .policy-section .policy-grid .policy-card .card-content ul li:before {
   content: "•";
   color: var(--secondary-color);
   position: absolute;
   left: 0;
 }
-body .sida-wrapper .content .policy-section .policy-grid .policy-card .card-content .learn-more {
-  background: transparent;
+body .content .policy-section .policy-grid .policy-card .card-content .learn-more {
+  width: 100%;
+  padding: 0.8rem;
   border: 2px solid var(--secondary-color);
+  border-radius: 8px;
+  background: transparent;
   color: var(--secondary-color);
-  padding: 0.8rem 1.5rem;
-  border-radius: 25px;
-  cursor: pointer;
   font-weight: 500;
+  cursor: pointer;
   transition: all 0.3s ease;
 }
-body .sida-wrapper .content .policy-section .policy-grid .policy-card .card-content .learn-more:hover {
+body .content .policy-section .policy-grid .policy-card .card-content .learn-more:hover {
   background: var(--secondary-color);
   color: white;
 }
-body .sida-wrapper .content .policy-section .contact-section {
+body .content .policy-section .contact-section {
   text-align: center;
   background: linear-gradient(135deg, #fff, var(--primary-color));
   padding: 3rem;
-  border-radius: 20px;
-  margin-top: 4rem;
+  border-radius: 16px;
+  margin-top: 2rem;
 }
-body .sida-wrapper .content .policy-section .contact-section h2 {
+body .content .policy-section .contact-section h2 {
+  font-size: 2rem;
   margin-bottom: 1rem;
-  color: var(--text-color);
 }
-body .sida-wrapper .content .policy-section .contact-section p {
+body .content .policy-section .contact-section p {
   color: #666;
   margin-bottom: 2rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
 }
-body .sida-wrapper .content .policy-section .contact-section .contact-btn {
+body .content .policy-section .contact-section .contact-btn {
+  padding: 1rem 2.5rem;
   background: var(--secondary-color);
   color: white;
   border: none;
-  padding: 1rem 2rem;
-  border-radius: 25px;
+  border-radius: 8px;
   font-weight: 500;
   cursor: pointer;
-  transition: transform 0.3s ease;
+  transition: all 0.3s ease;
 }
-body .sida-wrapper .content .policy-section .contact-section .contact-btn:hover {
+body .content .policy-section .contact-section .contact-btn:hover {
   transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
-body .sida-wrapper .footer {
+body .footer {
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
@@ -246,7 +253,7 @@ body .sida-wrapper .footer {
   overflow: hidden;
   z-index: 20;
 }
-body .sida-wrapper .footer a {
+body .footer a {
   z-index: 1;
   text-decoration: none;
   margin: 20px;
@@ -266,4 +273,22 @@ body .sida-wrapper .footer a {
   .policy-section .policy-grid {
     grid-template-columns: 1fr;
   }
+}
+.content {
+  padding-top: 60px;
+}
+.content .policy-section {
+  padding: 1rem;
+}
+.content .policy-section .hero-section {
+  margin-bottom: 2rem;
+}
+.content .policy-section .policy-grid {
+  gap: 1.5rem;
+}
+.content .policy-section .policy-grid .policy-card {
+  padding: 1.5rem;
+}
+.content .policy-section .contact-section {
+  padding: 2rem 1.5rem;
 }/*# sourceMappingURL=policy.css.map */
