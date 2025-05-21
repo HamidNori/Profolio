@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="/Css/About.css">
+    <link rel="stylesheet" href="/Css/contact.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
@@ -30,26 +30,34 @@
         <a href="">Join Us!</a>
     </header>
     <div class="content" id="content">
+
+        
         <div class="container">
-  <form action="action_page.php">
+            <h1>Contact Us</h1>
+            <p>We would love to hear from you! Please fill out the form below and we will get back to you as soon as possible.</p>
 
-    <label for="fname">First Name</label>
-    <input type="text" id="fname" name="firstname" placeholder="Your name..">
 
-    <label for="lname">Last Name</label>
-    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+  <form action="https://api.web3forms.com/submit" method="POST">
 
-    <label for="country">Country</label>
-    <select id="country" name="country">
-      <option value="australia">Australia</option>
-      <option value="canada">Canada</option>
-      <option value="usa">USA</option>
+    <input type="hidden" name="access_key" value="b4e686a6-9a75-423a-8230-2afa2b779bd3">
+
+    <label for="fname" class="label">First Name</label>
+    <input class="input" type="text" id="fname" name="firstname" placeholder="Your name..">
+
+    <label for="lname" class="label">Last Name</label>
+    <input class="input" type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+    <label for="country" class="label">Country</label>
+    <select class="country" id="country" name="country">
+      <option class="country" value="australia">Australia</option>
+      <option class="country" value="canada">Canada</option>
+      <option class="country" value="usa">USA</option>
     </select>
 
-    <label for="subject">Subject</label>
-    <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+    <label for="subject" class="label">Subject</label>
+    <textarea class="textarea" id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
 
-    <input type="submit" value="Submit">
+    <input class="input" type="submit" value="Submit">
 
   </form>
     </div>
@@ -60,9 +68,6 @@
     </div>
 
     <script src="/Js/Navbar.js"></script>
-
-
-
     
 </body>
 </html>
